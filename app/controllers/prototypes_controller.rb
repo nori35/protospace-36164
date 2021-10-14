@@ -53,10 +53,4 @@ class PrototypesController < ApplicationController
   def user_params
     params.permit(:title, :catch_copy, :concept, :image)
   end
-
-  def authenticate_user!
-    unless user_signed_in?
-      redirect_to action: :edit
-    end
-  end
 end
